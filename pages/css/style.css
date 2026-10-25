@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+::selection{
+        background: #3b8cff;
+        color: white;
+    }
+
+
+header{
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    background: #dde8f6;
+    align-items: center;
+    border-bottom: 2.5px solid #3b8cff;
+}
+
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+nav a{
+    padding: 18px 24px;
+    color: #0d1f3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 20px;
+}
+
+
+nav a:hover{
+    color: #3b8cff;
+    transform: translateY(-3px);
+}
+
+
+nav a.aktif{
+    color: #1f5fd1;
+}
+
+
+.kart{
+    max-width: 480px;
+    padding: 36px 28px;
+    background: #dde8f6;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+.foto{
+    width: 190px;
+    height: 230px;
+border-radius: 50%;
+border: 2.5px solid #3b8cff;
+margin: 0 auto 18px;
+object-fit: cover;
+animation: belir 0.8s ease-out;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.foto:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #3b8cff;
+}
+
+
+.sosyal{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+
+.sosyal a{
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
+    border-radius: 50%;
+    border: 2px solid #0d1f3c;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #0d1f3c; 
+}
+
+
+.sosyal a:hover{color: #3b8cff;}
+
+footer{
+    height: 55px;
+    background: #dde8f6;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    border-top: 2.5px solid #3b8cff;
+}
+
+
+#iletisim { font-size: 18px;}
+
+
+body {
+  background-image: url("../../images/main_bg.jpg");
+  background-size:  100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  background-color: #071a3a;
+}
+
+
+main{
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 40px 16px;
+}
+
+
+h1 { margin-bottom: 8px; }
+.slogan { margin-bottom: 16px; }
+.kart p { margin-bottom: 24px; }
+
+
+/* MOBİL | AI*/
+
+@media (max-width: 600px) {
+
+
+        body {
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    header {
+        height: auto;
+        min-height: 55px;
+    }
+
+    footer {
+        height: auto;
+        min-height: 55px;
+        text-align: center;
+    }
+
+    .kart {
+        padding: 24px 18px;
+    }
+
+    .sosyal {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sosyal a {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+    }
+
+}

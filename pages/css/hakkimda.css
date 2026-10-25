@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background: #3b8cff;
+    color: white;
+    }
+
+
+body {
+    background-image: url("../../images/main_bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    background-color: #071a3a;
+}
+
+
+header{
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    background: #dde8f6;
+    align-items: center;
+    border-bottom: 2.5px solid #3b8cff;
+}
+
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+nav a{
+    padding: 18px 24px;
+    color: #0d1f3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 20px;
+}
+
+
+nav a:hover{
+    color: #3b8cff;
+    transform: translateY(-3px);
+}
+
+
+nav a.aktif{
+    color: #1f5fd1;
+}
+
+
+main{
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 40px 16px;
+}
+
+
+footer{
+    height: 55px;
+    background: #dde8f6;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2.5px solid #3b8cff;
+}
+
+
+#iletisim { font-size: 18px;}
+
+
+.kart{
+    padding: 36px 28px;
+    background: #dde8f6;
+    border-radius: 12px;
+}
+
+
+h1 { margin-bottom: 8px; }
+.kart p { margin-bottom: 24px; }
+
+/* HAKKIMDA MAİN*/
+
+.kart-genis {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
+
+
+.kart-genis h2 {
+    margin: 24px 0 12px;
+    font-size: 22px;
+}
+
+
+.zaman {
+    border-left: 3px solid #3b8cff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.olay {
+    position: relative;
+    padding-left: 22px;
+}
+
+
+.olay::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #3b8cff;
+}
+
+
+.olay h3 {
+    font-size: 16px;
+}
+
+
+.olay p {
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+
+.olay .tarih {
+    font-size: 13px;
+    color: #3a4f73;
+}
+
+
+
+
+/* MOBİL | AI */
+
+
+
+
+@media (max-width: 600px) {
+
+        body {
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    header {
+        height: auto;
+        min-height: 55px;
+    }
+
+    footer {
+        height: auto;
+        min-height: 55px;
+        text-align: center;
+    }
+
+    .kart {
+        padding: 24px 18px;
+    }
+
+}

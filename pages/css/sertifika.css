@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    background: #3b8cff;
+    color: white;
+    }
+
+
+body {
+    background-image: url("../../images/main_bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #071a3a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+
+header{
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    background: #dde8f6;
+    align-items: center;
+    border-bottom: 2.5px solid #3b8cff;
+}
+
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+nav a{
+    padding: 18px 24px;
+    color: #0d1f3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 20px;
+}
+
+
+nav a:hover{
+    color: #3b8cff;
+    transform: translateY(-3px);
+}
+
+
+nav a.aktif{
+    color: #1f5fd1;
+}
+
+
+main{
+    flex: 1;
+    padding: 40px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+
+footer{
+    height: 55px;
+    background: #dde8f6;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2.5px solid #3b8cff;
+}
+
+
+#iletisim { font-size: 18px;}
+
+
+/* SERTİFİKA MAİN */
+
+.sertifikalar{
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+.sertifikalar h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #dde8f6;
+    text-align: center;
+}
+
+
+.izgara{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
+    gap: 20px;
+}
+
+
+.sertifika{
+    background: #dde8f6;
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.sertifika:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px #3b8cff;
+}
+
+
+.sertifika img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background: #b9cdea;
+    border-radius: 8px;
+}
+
+
+.sertifika h2{
+    font-size: 15px;
+    line-height: 1.3;
+    color: #0d1f3c;
+}
+
+
+.sertifika p{
+    margin-top: auto;
+    font-size: 13px;
+    color: #3a4f73;
+}
+
+
+
+/* MOBİL | AI */
+
+
+
+@media (max-width: 600px) {
+
+        body {
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    header {
+        height: auto;
+        min-height: 55px;
+    }
+
+    footer {
+        height: auto;
+        min-height: 55px;
+        text-align: center;
+    }
+
+    .sertifikalar h1 {
+        font-size: 26px;
+    }
+
+}
