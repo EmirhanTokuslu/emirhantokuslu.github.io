@@ -126,8 +126,9 @@ footer{
 .sertifika img{
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: contain;
+    height: 220px;
+    object-position: center;
+    object-fit: cover;
     background: #b9cdea;
     border-radius: 8px;
 }
